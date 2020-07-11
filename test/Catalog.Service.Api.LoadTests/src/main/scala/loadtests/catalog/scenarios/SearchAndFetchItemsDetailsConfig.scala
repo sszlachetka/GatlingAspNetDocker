@@ -1,4 +1,4 @@
-package ratelimiting.items.scenarios
+package loadtests.catalog.scenarios
 
 import scala.concurrent.duration.FiniteDuration
 

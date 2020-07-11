@@ -1,8 +1,8 @@
-package ratelimiting.items.scenarios
+package loadtests.catalog.scenarios
 
 import io.gatling.core.Predef._
 import io.gatling.core.Predef.{exec, scenario}
-import ratelimiting.items.requests.{Details, Search}
+import loadtests.catalog.requests.{Details, Search}
 import io.gatling.core.structure.PopulationBuilder
 import scala.concurrent.duration._
 

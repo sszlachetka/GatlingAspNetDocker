@@ -1,9 +1,9 @@
-package ratelimiting.items.scenarios
+package loadtests.catalog.scenarios
 
 import io.gatling.core.Predef._
 import io.gatling.core.Predef.scenario
 import io.gatling.core.structure.PopulationBuilder
-import ratelimiting.items.requests.BatchUpdate
+import loadtests.catalog.requests.BatchUpdate
 
 object BatchUpdateItems {
   def populationBuilder(config: BatchUpdateItemsConfig): PopulationBuilder = {

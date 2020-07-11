@@ -11,4 +11,4 @@ WORKDIR /opt/app
 COPY docker-entrypoint.sh .
 COPY --from=build-env /build/target .
 ENTRYPOINT ["sh", "/opt/app/docker-entrypoint.sh"]
-CMD ["ratelimiting.items.BrowseItemsCatalogSimulation"]
+CMD ["loadtests.catalog.BrowseItemsCatalogSimulation"]

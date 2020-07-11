@@ -1,6 +1,6 @@
-package ratelimiting.items
+package loadtests.catalog
 
-import ratelimiting.items.scenarios.{BatchUpdateItemsConfig, SearchAndFetchItemsDetailsConfig}
+import loadtests.catalog.scenarios.{BatchUpdateItemsConfig, SearchAndFetchItemsDetailsConfig}
 
 import scala.concurrent.duration.FiniteDuration
 

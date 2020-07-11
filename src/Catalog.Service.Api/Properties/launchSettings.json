@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "RateLimiting.LoadTests.ApiClient": {
+    "Catalog.Service.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

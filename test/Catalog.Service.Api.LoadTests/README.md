@@ -8,7 +8,7 @@ docker run -ti --rm -v ${PWD}:/build --mount 'type=volume,src=maven_repo,dst=/ro
 2. Run jar
 TODO: Why `-Dlogback.configurationFile=logback.xml` doesn't work in this command?
 ```
-docker run -it --rm -v ${PWD}/target:/opt/app -w /opt/app adoptopenjdk/openjdk8:alpine-slim java -jar catalog-load-tests-1.0.jar -s ratelimiting.items.BrowseItemsCatalogSimulation
+docker run -it --rm -v ${PWD}/target:/opt/app -w /opt/app adoptopenjdk/openjdk8:alpine-slim java -jar catalog-load-tests-1.0.jar -s loadtests.catalog.BrowseItemsCatalogSimulation
 ```
 
 Other [command line options](https://gatling.io/docs/current/general/configuration#command-line-options) to io.gatling.app.Gatling

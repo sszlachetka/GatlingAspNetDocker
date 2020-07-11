@@ -32,7 +32,7 @@
             <configuration>
                 <configFolder>src/main/resources</configFolder>
                 <resultsFolder>target/gatling/results</resultsFolder>
-                <simulationsFolder>src/main/scala/ratelimiting</simulationsFolder>
+                <simulationsFolder>src/main/scala/loadtests</simulationsFolder>
             </configuration>
         </plugin>
 

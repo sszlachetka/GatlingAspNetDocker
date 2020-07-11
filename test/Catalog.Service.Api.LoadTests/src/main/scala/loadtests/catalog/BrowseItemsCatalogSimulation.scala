@@ -1,9 +1,9 @@
-package ratelimiting.items
+package loadtests.catalog
 
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
-import ratelimiting.ConfigProvider
-import ratelimiting.items.scenarios.{BatchUpdateItems, SearchAndFetchItemsDetails}
+import loadtests.ConfigProvider
+import loadtests.catalog.scenarios.{BatchUpdateItems, SearchAndFetchItemsDetails}
 
 class BrowseItemsCatalogSimulation extends Simulation {
 

@@ -1,6 +1,6 @@
-package ratelimiting
+package loadtests
 
-import ratelimiting.items.BrowseItemsCatalogSimulationConfig
+import loadtests.catalog.BrowseItemsCatalogSimulationConfig
 import pureconfig._
 import pureconfig.generic.auto._
 
