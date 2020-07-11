@@ -9,6 +9,6 @@ object Search {
       .get("/api/Catalog")
       .check(status.is(200))
       .check(
-        jsonPath("$.catalog[0].id").saveAs("itemId")
+        jsonPath("$.items[0].id").saveAs("itemId")
       )
 }
