@@ -8,7 +8,7 @@ object BatchUpdate {
 
   val request =
     http("batchUpdate")
-      .patch("/api/Items")
+      .patch("/api/Catalog")
       .body(StringBody(requestBody)).asJson
       .check(status.is(200))
 }

@@ -6,17 +6,15 @@ COPY ./*.sln  ./
 # Copy the main source project files
 COPY src/*/*.csproj ./
 RUN for file in $(ls *.csproj); do mkdir -p src/${file%.*}/ && mv $file src/${file%.*}/; done
-# Copy the test project files
-COPY test/*/*.csproj ./
-RUN for file in $(ls *.csproj); do mkdir -p test/${file%.*}/ && mv $file test/${file%.*}/; done
+
 RUN dotnet restore
 
 # Copy everything else and build
 COPY . ./
-RUN dotnet publish test/RateLimiting.LoadTests.ApiClient/RateLimiting.LoadTests.ApiClient.csproj -c Release -o out
+RUN dotnet publish src/Catalog.Service.Api/Catalog.Service.Api.csproj -c Release -o out
 
 ## Build runtime image
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
 WORKDIR /app
 COPY --from=build-env /app/out .
-ENTRYPOINT ["dotnet", "RateLimiting.LoadTests.ApiClient.dll"]
+ENTRYPOINT ["dotnet", "Catalog.Service.Api.dll"]

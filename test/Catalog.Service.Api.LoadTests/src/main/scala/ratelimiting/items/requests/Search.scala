@@ -6,7 +6,7 @@ import io.gatling.http.Predef._
 object Search {
   val request =
     http("search")
-      .get("/api/Items")
+      .get("/api/Catalog")
       .check(status.is(200))
       .check(
         jsonPath("$.items[0].id").saveAs("itemId")

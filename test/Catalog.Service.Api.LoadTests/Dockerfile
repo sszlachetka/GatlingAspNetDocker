@@ -7,7 +7,6 @@ COPY src/ /build/src/
 RUN mvn package
 
 FROM adoptopenjdk/openjdk8:alpine-slim
-RUN apk --update add postgresql-client jq && rm -rf /var/cache/apk/*
 WORKDIR /opt/app
 COPY docker-entrypoint.sh .
 COPY --from=build-env /build/target .

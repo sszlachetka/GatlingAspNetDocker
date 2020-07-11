@@ -6,6 +6,6 @@ import io.gatling.http.Predef._
 object Details {
   val request =
     http("details")
-      .get("/api/Items/${itemId}")
+      .get("/api/Catalog/${itemId}")
       .check(status.is(200))
 }

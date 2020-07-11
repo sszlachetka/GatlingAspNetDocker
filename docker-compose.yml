@@ -4,46 +4,21 @@ services:
   api_client:
     build:
       context: .
-      dockerfile: test/RateLimiting.LoadTests.ApiClient/Dockerfile
+      dockerfile: src/Catalog.Service.Api/Dockerfile
     environment:
-      - API_CLIENT_RATE_LIMITING_ENABLED=${API_CLIENT_RATE_LIMITING_ENABLED}
-      - API_CLIENT_RATE_LIMIT_MAX_REQUESTS=${API_CLIENT_RATE_LIMIT_MAX_REQUESTS}
-      - API_CLIENT_RATE_LIMIT_TIME_UNIT_MS=${API_CLIENT_RATE_LIMIT_TIME_UNIT_MS}
       - API_LATENCY_MIN_MS=${API_LATENCY_MIN_MS}
       - API_LATENCY_MAX_MS=${API_LATENCY_MAX_MS}
     ports:
       - "5080:80"
     volumes:
-      - ./docker-compose/workdir/${API_LOGS_DIR}:/app/logs
-
-  logs_db:
-    build: test/logs-db/
-    environment:
-      - API_CLIENT_RATE_LIMIT_MAX_REQUESTS=${API_CLIENT_RATE_LIMIT_MAX_REQUESTS}
-      - API_CLIENT_RATE_LIMIT_TIME_UNIT_MS=${API_CLIENT_RATE_LIMIT_TIME_UNIT_MS}
-      - POSTGRES_PASSWORD=${LOGS_DB_PASSWORD}
-    ports:
-      - "5432:5432"
-    volumes:
-      - ./docker-compose/workdir/${LOGS_DB_INPUT_DIR_SRC}:${LOGS_DB_INPUT_DIR_DST}
+      - ./workdir/api-logs:/app/logs
 
   load_tests:
-    build: test/RateLimiting.LoadTests/
+    build: test/Catalog.Service.Api.LoadTests/
     environment:
       - LOAD_TESTS_BASE_URL=http://api_client:80
       - LOAD_TESTS_MAX_DURATION_SEC=${LOAD_TESTS_MAX_DURATION_SEC}
-      - ON_LOAD_TESTS_COMPLETED=/opt/app/scripts/transform-logs.sh
-      - API_CLIENT_RATE_LIMIT_MAX_REQUESTS=${API_CLIENT_RATE_LIMIT_MAX_REQUESTS}
-      - API_CLIENT_RATE_LIMIT_TIME_UNIT_MS=${API_CLIENT_RATE_LIMIT_TIME_UNIT_MS}
-      - PG_HOST=logs_db
-      - PG_USER=postgres
-      - PG_PASS=${LOGS_DB_PASSWORD}
-      - API_LOGS_DIR=${API_LOGS_DIR}
-      - LOGS_DB_INPUT_DIR_SRC=${LOGS_DB_INPUT_DIR_SRC}
-      - LOGS_DB_INPUT_DIR_DST=${LOGS_DB_INPUT_DIR_DST}
     depends_on:
       - api_client
-      - logs_db
     volumes:
-      - ./docker-compose/workdir:/opt/app/workdir
-      - ./docker-compose/scripts:/opt/app/scripts
+      - ./workdir/load-tests-results:/opt/app/results
