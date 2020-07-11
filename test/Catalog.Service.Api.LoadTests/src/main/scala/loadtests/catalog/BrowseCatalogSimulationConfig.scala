@@ -6,5 +6,5 @@ import scala.concurrent.duration.FiniteDuration
 
 case class BrowseCatalogSimulationConfig(
                                           maxDuration: FiniteDuration,
-                                          searchAndFetchItemsDetails: SearchItemConfig,
+                                          searchItem: SearchItemConfig,
                                           batchUpdateItems: BatchUpdateItemsConfig)

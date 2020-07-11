@@ -15,6 +15,6 @@ class BrowseCatalogSimulation extends Simulation {
 
   setUp(
     BatchUpdateItems.populationBuilder(simulationConfig.batchUpdateItems),
-    SearchItem.populationBuilder(simulationConfig.searchAndFetchItemsDetails)
+    SearchItem.populationBuilder(simulationConfig.searchItem)
   ).protocols(httpProtocol).maxDuration(simulationConfig.maxDuration)
 }
