@@ -12,7 +12,7 @@ services:
     build: test/Catalog.Service.Api.LoadTests/
     environment:
       - LOAD_TESTS_BASE_URL=http://catalog_api:80
-      - LOAD_TESTS_MAX_DURATION_SEC=${LOAD_TESTS_MAX_DURATION_SEC}
+      - LOAD_TESTS_MAX_DURATION=${LOAD_TESTS_MAX_DURATION}
       - LOAD_TESTS_SIMULATION_NAME=${LOAD_TESTS_SIMULATION_NAME}
     depends_on:
       - catalog_api

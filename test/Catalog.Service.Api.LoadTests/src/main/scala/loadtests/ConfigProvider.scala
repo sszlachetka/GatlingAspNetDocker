@@ -8,6 +8,6 @@ object ConfigProvider {
   val commons = ConfigSource.file("commons.conf")
     .loadOrThrow[CommonsConfig]
 
-  val browseItemsCatalogSimulation = ConfigSource.file("browseItemsCatalogSimulation.conf")
+  val browseItemsCatalogSimulation = ConfigSource.file("browseCatalogSimulation.conf")
     .loadOrThrow[BrowseCatalogSimulationConfig]
 }
