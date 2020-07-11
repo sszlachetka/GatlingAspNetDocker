@@ -1,0 +1,5 @@
+bin/
+obj/
+/packages/
+docker-compose/workdir/
+BenchmarkDotNet.Artifacts/
