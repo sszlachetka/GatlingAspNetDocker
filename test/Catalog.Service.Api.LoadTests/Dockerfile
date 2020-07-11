@@ -8,7 +8,5 @@ RUN mvn package
 
 FROM adoptopenjdk/openjdk8:alpine-slim
 WORKDIR /opt/app
-COPY docker-entrypoint.sh .
 COPY --from=build-env /build/target .
-ENTRYPOINT ["sh", "/opt/app/docker-entrypoint.sh"]
-CMD ["loadtests.catalog.BrowseCatalogSimulation"]
+ENTRYPOINT ["sh", "-c", "java -Dlogback.configurationFile=logback.xml -jar catalog-load-tests-1.0.jar -s ${LOAD_TESTS_SIMULATION_NAME}"]
