@@ -1,24 +1,19 @@
 version: "3.8"
 services:
 
-  api_client:
+  catalog_api:
     build:
       context: .
       dockerfile: src/Catalog.Service.Api/Dockerfile
-    environment:
-      - API_LATENCY_MIN_MS=${API_LATENCY_MIN_MS}
-      - API_LATENCY_MAX_MS=${API_LATENCY_MAX_MS}
     ports:
       - "5080:80"
-    volumes:
-      - ./workdir/api-logs:/app/logs
 
   load_tests:
     build: test/Catalog.Service.Api.LoadTests/
     environment:
-      - LOAD_TESTS_BASE_URL=http://api_client:80
+      - LOAD_TESTS_BASE_URL=http://catalog_api:80
       - LOAD_TESTS_MAX_DURATION_SEC=${LOAD_TESTS_MAX_DURATION_SEC}
     depends_on:
-      - api_client
+      - catalog_api
     volumes:
-      - ./workdir/load-tests-results:/opt/app/results
+      - ./results:/opt/app/results

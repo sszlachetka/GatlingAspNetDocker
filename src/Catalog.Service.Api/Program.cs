@@ -1,7 +1,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using NLog.Web;
 
 namespace Catalog.Service.Api
 {
@@ -20,8 +19,7 @@ namespace Catalog.Service.Api
                 {
                     logging.ClearProviders();
                     logging.SetMinimumLevel(LogLevel.Trace);
-                })
-                .UseNLog();
+                });
         }
     }
 }

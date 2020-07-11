@@ -2,9 +2,9 @@ using System;
 
 namespace Catalog.Service.Mock
 {
-    public class Range
+    public class DurationRange
     {
-        public Range(int min, int max)
+        public DurationRange(int min, int max)
         {
             if (min > max)
                 throw new ArgumentException("min > max", nameof(min));

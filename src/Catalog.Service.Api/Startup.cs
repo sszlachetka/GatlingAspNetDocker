@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Catalog.Service.Mock;
-using Range = Catalog.Service.Mock.Range;
 
 namespace Catalog.Service.Api
 {
@@ -27,11 +26,7 @@ namespace Catalog.Service.Api
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "Restricted load API", Version = "v1"});
             });
 
-            services.AddCatalogServiceMock(
-                new Range(
-                    EnvironmentVariableInt("API_LATENCY_MIN_MS", 40) / 2,
-                    EnvironmentVariableInt("API_LATENCY_MAX_MS", 80) / 2),
-                "catalog-svc");
+            services.AddCatalogServiceMock(new RandomCatalogOptions());
         }
 
         private static int EnvironmentVariableInt(string variableName, int defaultValue)
