@@ -7,7 +7,7 @@ import loadtests.catalog.requests.BatchUpdate
 
 object BatchUpdateItems {
   def populationBuilder(config: BatchUpdateItemsConfig): PopulationBuilder = {
-    scenario("Batch update")
+    scenario("Batch update catalog items")
       .forever() {
         exec(BatchUpdate.request)
           .pause(config.interval)

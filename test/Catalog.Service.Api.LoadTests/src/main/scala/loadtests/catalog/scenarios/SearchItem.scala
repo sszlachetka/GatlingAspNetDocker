@@ -6,10 +6,10 @@ import loadtests.catalog.requests.{Details, Search}
 import io.gatling.core.structure.PopulationBuilder
 import scala.concurrent.duration._
 
-object SearchAndFetchItemsDetails {
-  def populationBuilder(config: SearchAndFetchItemsDetailsConfig): PopulationBuilder = {
+object SearchItem {
+  def populationBuilder(config: SearchItemConfig): PopulationBuilder = {
 
-    scenario(s"Search catalog")
+    scenario(s"Search catalog item")
       .forever() {
         exec(Search.request)
           .pause(1 second)

@@ -1,6 +1,6 @@
 package loadtests
 
-import loadtests.catalog.BrowseItemsCatalogSimulationConfig
+import loadtests.catalog.BrowseCatalogSimulationConfig
 import pureconfig._
 import pureconfig.generic.auto._
 
@@ -9,5 +9,5 @@ object ConfigProvider {
     .loadOrThrow[CommonsConfig]
 
   val browseItemsCatalogSimulation = ConfigSource.file("browseItemsCatalogSimulation.conf")
-    .loadOrThrow[BrowseItemsCatalogSimulationConfig]
+    .loadOrThrow[BrowseCatalogSimulationConfig]
 }

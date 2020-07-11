@@ -2,7 +2,7 @@ package loadtests.catalog.scenarios
 
 import scala.concurrent.duration.FiniteDuration
 
-case class SearchAndFetchItemsDetailsConfig(
+case class SearchItemConfig(
                                              nothingFor: FiniteDuration,
                                              rampUsers: Int,
                                              rampUsersDuring: FiniteDuration,

@@ -19,6 +19,7 @@ namespace Catalog.Service.Api
                 {
                     logging.ClearProviders();
                     logging.SetMinimumLevel(LogLevel.Trace);
+                    logging.AddConsole();
                 });
         }
     }

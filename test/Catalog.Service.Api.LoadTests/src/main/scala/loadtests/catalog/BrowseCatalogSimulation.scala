@@ -3,9 +3,9 @@ package loadtests.catalog
 import io.gatling.core.Predef._
 import io.gatling.http.Predef._
 import loadtests.ConfigProvider
-import loadtests.catalog.scenarios.{BatchUpdateItems, SearchAndFetchItemsDetails}
+import loadtests.catalog.scenarios.{BatchUpdateItems, SearchItem}
 
-class BrowseItemsCatalogSimulation extends Simulation {
+class BrowseCatalogSimulation extends Simulation {
 
   val commonsConfig = ConfigProvider.commons;
   val simulationConfig = ConfigProvider.browseItemsCatalogSimulation
@@ -15,6 +15,6 @@ class BrowseItemsCatalogSimulation extends Simulation {
 
   setUp(
     BatchUpdateItems.populationBuilder(simulationConfig.batchUpdateItems),
-    SearchAndFetchItemsDetails.populationBuilder(simulationConfig.searchAndFetchItemsDetails)
+    SearchItem.populationBuilder(simulationConfig.searchAndFetchItemsDetails)
   ).protocols(httpProtocol).maxDuration(simulationConfig.maxDuration)
 }
