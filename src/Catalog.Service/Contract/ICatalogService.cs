@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Catalog.Api.Contract
+namespace Catalog.Service.Contract
 {
     public interface ICatalogService
     {

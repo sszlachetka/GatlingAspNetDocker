@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using Catalog.Api.TimeUtils;
+using Catalog.Service.Mock.TimeUtils;
 
-namespace Catalog.Api.Mock
+namespace Catalog.Service.Mock
 {
     internal class RandomDelayGenerator
     {

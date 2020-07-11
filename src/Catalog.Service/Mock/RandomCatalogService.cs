@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using Catalog.Api.Contract;
+using Catalog.Service.Contract;
 
-namespace Catalog.Api.Mock
+namespace Catalog.Service.Mock
 {
     internal class RandomCatalogService : ICatalogService
     {

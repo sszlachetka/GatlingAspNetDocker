@@ -1,4 +1,4 @@
-namespace Catalog.Api.Mock
+namespace Catalog.Service.Mock
 {
     public class RandomCatalogOptions
     {

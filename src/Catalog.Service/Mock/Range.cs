@@ -1,6 +1,6 @@
 using System;
 
-namespace Catalog.Api.Mock
+namespace Catalog.Service.Mock
 {
     public class Range
     {

@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Catalog.Api.TimeUtils
+namespace Catalog.Service.Mock.TimeUtils
 {
     internal class TaskDelayGenerator : IDelayGenerator
     {

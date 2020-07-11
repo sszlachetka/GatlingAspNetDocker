@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Bogus;
-using Catalog.Api.Contract;
+using Catalog.Service.Contract;
 
-namespace Catalog.Api.Mock
+namespace Catalog.Service.Mock
 {
     public class RandomData
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace Catalog.Api.TimeUtils
+namespace Catalog.Service.Mock.TimeUtils
 {
     internal interface IStopwatch
     {

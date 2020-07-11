@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Catalog.Api.Contract;
+using Catalog.Service.Contract;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Catalog.ApiClient.Controllers
+namespace Catalog.Service.Api.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]

@@ -1,11 +1,11 @@
 using System;
 using System.Diagnostics;
-using Catalog.Api.Contract;
-using Catalog.Api.TimeUtils;
+using Catalog.Service.Contract;
+using Catalog.Service.Mock.TimeUtils;
 using IdGen;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Catalog.Api.Mock
+namespace Catalog.Service.Mock
 {
     public static class DependencyInjectionExtensions
     {

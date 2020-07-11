@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Catalog.Api.Contract
+namespace Catalog.Service.Contract
 {
     public class SearchResult
     {

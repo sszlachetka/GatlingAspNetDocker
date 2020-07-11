@@ -5,10 +5,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
-using Catalog.Api.Mock;
-using Range = Catalog.Api.Mock.Range;
+using Catalog.Service.Mock;
+using Range = Catalog.Service.Mock.Range;
 
-namespace Catalog.ApiClient
+namespace Catalog.Service.Api
 {
     public class Startup
     {
