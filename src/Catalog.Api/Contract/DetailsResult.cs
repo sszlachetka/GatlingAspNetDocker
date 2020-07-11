@@ -1,4 +1,4 @@
-namespace RateLimiting.LoadTests.Api.Contract
+namespace Catalog.Api.Contract
 {
     public class DetailsResult
     {

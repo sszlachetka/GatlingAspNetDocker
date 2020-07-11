@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 
-namespace RateLimiting.LoadTests.Api.TimeUtils
+namespace Catalog.Api.TimeUtils
 {
     internal class DiagnosticsStopwatch : IStopwatch
     {

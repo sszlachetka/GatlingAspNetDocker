@@ -3,7 +3,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NLog.Web;
 
-namespace RateLimiting.LoadTests.ApiClient
+namespace Catalog.ApiClient
 {
     public class Program
     {

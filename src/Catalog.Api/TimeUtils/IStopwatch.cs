@@ -1,6 +1,6 @@
 using System;
 
-namespace RateLimiting.LoadTests.Api.TimeUtils
+namespace Catalog.Api.TimeUtils
 {
     internal interface IStopwatch
     {

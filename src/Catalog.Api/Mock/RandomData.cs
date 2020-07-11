@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using Bogus;
-using RateLimiting.LoadTests.Api.Contract;
+using Catalog.Api.Contract;
 
-namespace RateLimiting.LoadTests.Api.Mock
+namespace Catalog.Api.Mock
 {
     public class RandomData
     {

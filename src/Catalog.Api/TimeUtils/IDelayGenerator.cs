@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace RateLimiting.LoadTests.Api.TimeUtils
+namespace Catalog.Api.TimeUtils
 {
     internal interface IDelayGenerator
     {

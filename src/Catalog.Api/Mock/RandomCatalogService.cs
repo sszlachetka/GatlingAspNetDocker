@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using RateLimiting.LoadTests.Api.Contract;
+using Catalog.Api.Contract;
 
-namespace RateLimiting.LoadTests.Api.Mock
+namespace Catalog.Api.Mock
 {
     internal class RandomCatalogService : ICatalogService
     {

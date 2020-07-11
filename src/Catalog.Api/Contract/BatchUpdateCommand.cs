@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace RateLimiting.LoadTests.Api.Contract
+namespace Catalog.Api.Contract
 {
     public class BatchUpdateCommand
     {

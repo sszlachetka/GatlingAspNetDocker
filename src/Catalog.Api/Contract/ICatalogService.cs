@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace RateLimiting.LoadTests.Api.Contract
+namespace Catalog.Api.Contract
 {
     public interface ICatalogService
     {

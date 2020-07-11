@@ -1,11 +1,11 @@
 using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using Catalog.Api.Contract;
 using IdGen;
 using NLog;
-using RateLimiting.LoadTests.Api.Contract;
 
-namespace RateLimiting.LoadTests.Api.Mock
+namespace Catalog.Api.Mock
 {
     public class LoggingCatalogServiceDecorator : ICatalogService
     {

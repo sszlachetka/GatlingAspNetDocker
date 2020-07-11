@@ -1,11 +1,11 @@
 using System;
 using System.Diagnostics;
+using Catalog.Api.Contract;
+using Catalog.Api.TimeUtils;
 using IdGen;
 using Microsoft.Extensions.DependencyInjection;
-using RateLimiting.LoadTests.Api.Contract;
-using RateLimiting.LoadTests.Api.TimeUtils;
 
-namespace RateLimiting.LoadTests.Api.Mock
+namespace Catalog.Api.Mock
 {
     public static class DependencyInjectionExtensions
     {

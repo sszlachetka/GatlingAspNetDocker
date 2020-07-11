@@ -1,4 +1,4 @@
-namespace RateLimiting.LoadTests.Api.Mock
+namespace Catalog.Api.Mock
 {
     public class RandomCatalogOptions
     {

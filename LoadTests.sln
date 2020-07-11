@@ -2,9 +2,9 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BCBB630D-20C6-492C-8E34-F50164E6C7B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateLimiting.LoadTests.Api", "src\RateLimiting.LoadTests.Api\RateLimiting.LoadTests.Api.csproj", "{2A0E3630-2768-430A-AB6B-EC5E350708F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.Api", "src\Catalog.Api\Catalog.Api.csproj", "{2A0E3630-2768-430A-AB6B-EC5E350708F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RateLimiting.LoadTests.ApiClient", "src\RateLimiting.LoadTests.ApiClient\RateLimiting.LoadTests.ApiClient.csproj", "{9EE59A13-4C1E-494D-9B01-D529D9EA4F4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catalog.ApiClient", "src\Catalog.ApiClient\Catalog.ApiClient.csproj", "{9EE59A13-4C1E-494D-9B01-D529D9EA4F4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

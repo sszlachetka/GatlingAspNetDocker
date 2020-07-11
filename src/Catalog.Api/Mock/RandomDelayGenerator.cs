@@ -1,8 +1,8 @@
 using System;
 using System.Threading.Tasks;
-using RateLimiting.LoadTests.Api.TimeUtils;
+using Catalog.Api.TimeUtils;
 
-namespace RateLimiting.LoadTests.Api.Mock
+namespace Catalog.Api.Mock
 {
     internal class RandomDelayGenerator
     {

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Catalog.Api.Contract;
 using Microsoft.AspNetCore.Mvc;
-using RateLimiting.LoadTests.Api.Contract;
 
-namespace RateLimiting.LoadTests.ApiClient.Controllers
+namespace Catalog.ApiClient.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ItemsController : ControllerBase
+    public class CatalogController : ControllerBase
     {
         private readonly ICatalogService _catalogService;
 
-        public ItemsController(ICatalogService catalogService)
+        public CatalogController(ICatalogService catalogService)
         {
             _catalogService = catalogService ?? throw new ArgumentNullException(nameof(catalogService));
         }
